@@ -259,13 +259,8 @@ let amorpm = document.getElementById("amorpm")
         var currDate = new Date();
 var time = currDate.toLocaleTimeString();
 tareekh.innerHTML = currDate.toLocaleDateString();
-if(time.search("AM") != -1)
-{
-amorpm.innerHTML = time
-}
-else{
-    amorpm.innerHTML = `PM`;
-}
+
+amorpm.innerHTML = time;
 let milisecond  = currDate.getMilliseconds();
 let second = currDate.getSeconds();
 let minute = currDate.getMinutes();
