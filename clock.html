@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width"> -->
+    <title>Document</title>
+    <style>
+        
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        #heading{
+            text-align: center;
+        }
+        .frame{
+        
+            display: flex;
+        justify-content: center;
+        height: 30rem;
+        border: 2px solid black;
+        box-sizing: border-box;
+        width: 30rem;
+        border-radius: 50%;
+        padding-right: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        #hourhand{
+            height: 7rem;
+            width: 0.5rem;
+            border-radius: 10%;
+            border: 1px solid rgb(110, 3, 3);
+            box-sizing: border-box;
+            margin-top: 8rem;
+            z-index: 15;
+            background: rgb(110, 3, 3);
+            transform-origin: right bottom;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        }
+        #minutehand{
+            height: 11rem;
+            width: 0.2rem;
+            z-index: 16;
+            border: 1px solid rgb(110, 3, 3);
+            position: absolute;
+            background: rgb(110, 3, 3);
+            margin-top: 4rem;
+            transform-origin: right bottom;
+            border-radius: 10%;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+        #secondhand{
+height: 13rem;
+width: 0rem;
+z-index: 17;
+border: 1px solid rgb(110, 3, 3);
+position: absolute;
+margin-top: 2rem;
+/* transform: rotate(360deg); */
+transform-origin: right bottom;
+border-radius: 50%;
+box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+/* transition-timing-function: linear; */
+/* transition-duration: 1ms; */
+        }
+        #center{
+            height: 1.5rem;
+            width: 1.5rem;
+            background: red;
+            z-index: 18;
+            position: absolute;
+            text-align: center;
+            margin-top: 14.3rem;
+            border-radius: 50%;
+        }
+        #amorpm{
+             height: 3rem;
+            width: 3rem;
+            z-index: 1;
+            position: absolute;
+            text-align: center;
+            margin-top: 20rem;
+            color: rgb(161, 11, 11);
+            /* border-radius: 50%; */
+        }
+                #tareekh{
+             height: 3rem;
+            width: 3rem;
+            z-index: 0;
+            position: absolute;
+            text-align: center;
+            margin-top: 6em;
+            color: rgb(161, 11, 11);
+            /* border-radius: 50%; */
+        }
+        #h1{
+                     height: 15rem;
+                     transform: rotate(31deg);
+            z-index: 1;
+            position: absolute;
+            background: transparent;
+            color: black;
+             transform-origin: right bottom;
+        }
+                #h2{
+                       height: 15rem;
+                     transform: rotate(61deg);
+            z-index: 2;
+            position: absolute;
+            background: transparent;
+            color: black;
+             transform-origin: right bottom;
+
+        }
+                #h3{
+                            height: 15rem;
+                     transform: rotate(91deg);
+            z-index: 3;
+            position: absolute;
+            background: transparent;
+            color: black;
+             transform-origin: right bottom;
+
+        }
+                #h4{
+                     height: 15rem;
+                     transform: rotate(121deg);
+            z-index: 4;
+            position: absolute;
+            background: transparent;
+            color: black;
+             transform-origin: right bottom;
+        }
+                #h5{
+                        height: 15rem;
+                     transform: rotate(151deg);
+            z-index: 5;
+            position: absolute;
+            background: transparent;
+            color: black;
+             transform-origin: right bottom;
+
+        }
+                #h6{
+                     height: 15rem;
+                     transform: rotate(181deg);
+            z-index: 6;
+            position: absolute;
+            background: transparent;
+            color: black;
+             transform-origin: right bottom;
+
+        }
+                #h7{
+                        height: 15rem;
+                     transform: rotate(211deg);
+            z-index: 7;
+            position: absolute;
+            background: transparent;
+            color: black;
+             transform-origin: right bottom;
+
+        }
+                #h8{
+                     height: 15rem;
+                     transform: rotate(241deg);
+            z-index: 8;
+            position: absolute;
+            background: transparent;
+            color: black;
+             transform-origin: right bottom;
+        }
+                #h9{
+                       height: 15rem;
+                     transform: rotate(271deg);
+            z-index: 9;
+            position: absolute;
+            background: transparent;
+            color: black;
+             transform-origin: right bottom;
+
+        }
+                #h10{
+                     height: 15rem;
+                     transform: rotate(301deg);
+            z-index: 10;
+            position: absolute;
+            background: transparent;
+            color: black;
+             transform-origin: right bottom;
+
+        }
+                #h11{
+                     height: 15rem;
+                     transform: rotate(331deg);
+            z-index: 11;
+            position: absolute;
+            background: transparent;
+            color: black;
+             transform-origin: right bottom;
+
+        }
+                #h12{
+                     height: 15rem;
+                     transform: rotate(1deg);
+            z-index: 12;
+            position: absolute;
+            background: transparent;
+            color: red;
+             transform-origin: right bottom;
+        }
+        .dots{
+            height: 1rem;
+            width: 1rem;
+            background: red;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading" style="color: red;">ANALOG CLOCK</h1>
+    <div class="frame" id="timeId">
+        <div id="hourhand"></div>
+        <div id="minutehand"></div>
+        <div id="secondhand"></div>
+        <div id="center"></div>
+        <div id="amorpm"></div>
+        <div id="tareekh"></div>
+        <div id="h12"><div class="dots"></div></div>
+         <div id="h1"><div class="dots"></div></div>
+          <div id="h2"><div class="dots"></div></div>
+           <div id="h3"><div class="dots"></div></div>
+            <div id="h4"><div class="dots"></div></div>
+             <div id="h5"><div class="dots"></div></div>
+              <div id="h6"><div class="dots"></div></div>
+               <div id="h7"><div class="dots"></div></div>
+                <div id="h8"><div class="dots"></div></div>
+                 <div id="h9"><div class="dots"></div></div>
+                  <div id="h10"><div class="dots"></div></div>
+                   <div id="h11"><div class="dots"></div></div>
+    </div>
+</body>
+<script>
+    let currDate = new Date();
+    // let clock = currDate.getMinutes();
+    // console.log(clock);
+// let clock = document.getElementById("timeId");
+let tareekh = document.getElementById("tareekh");
+let secondHand = document.getElementById("secondhand");
+let hourHand = document.getElementById("hourhand");
+let minuteHand = document.getElementById("minutehand");
+let amorpm = document.getElementById("amorpm")
+    setInterval(()=>{
+        var currDate = new Date();
+var time = currDate.toLocaleTimeString();
+tareekh.innerHTML = currDate.toLocaleDateString();
+amorpm.innerHTML = time
+
+let milisecond  = currDate.getMilliseconds();
+let second = currDate.getSeconds();
+let minute = currDate.getMinutes();
+let hour = currDate.getHours();
+secondHand.style.transform = `rotate(${second *6 + 0.006*milisecond}deg)`;
+minuteHand.style.transform  = `rotate(${minute*6 + 0.1*second + 0.0001*milisecond}deg)`;
+hourHand.style.transform = `rotate(${hour*30 + minute*0.5}deg)`;
+    })
+
+
+// setInterval(()=>{
+//     secondHand.style.transform = "rotate(360deg)";
+// },60000)
+</script>
+</html>
